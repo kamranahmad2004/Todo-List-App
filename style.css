@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: linear-gradient(90deg, #000430, #1e3a8a);
+    --secondry-background: #212657;
+    --text: white;
+    --purple: #828dff;
+    --teal: #24feee;
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+    font-family: "Poppins", sans-serif;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    margin: 25vh auto 10px auto;
+    max-width: 550px;
+    flex-direction: column;
+
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    border: 2px solid var(--purple);
+    width: 100%;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2),
+        0 8px 30px rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+}
+
+.details {
+    width: 100%;
+}
+
+
+.progressBar {
+    width: 100%;
+    margin-top: 10px;
+    height: 10px;
+    background-color: var(--secondry-background);
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.progress {
+    width: 0%;
+    height: 10px;
+    border-radius: 10px;
+    background-color: var(--teal);
+    transition: all 0.3s ease;
+}
+
+#number {
+    width: 100px;
+    height: 100px;
+    background-color: var(--purple);
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
+    align-items: center;
+    border-radius: 50%;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 35px;
+}
+
+input {
+    width: 100%;
+    flex: 1;
+    background: var(--secondry-background);
+    border-radius: 10px;
+    border: 1px solid var(--purple);
+    color: var(--text);
+    padding: 15px 12px;
+    outline: none;
+    font-size: 1rem;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: var(--text);
+    background-color: var(--purple);
+}
+
+/* ul items */
+#task-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 25px;
+    list-style: none;
+}
+
+.task-items {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--secondry-background);
+    border-radius: 10px;
+    border: 1px solid var(--purple);
+    width: 100%;
+    margin-top: 14px;
+    outline: none;
+    align-items: center;
+    animation: slideIn 0.3s ease-in-out;
+}
+
+/* Keyframes for the slide-in animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.task {
+    padding: 15px 12px;
+    gap: 14px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.task input {
+    width: 25px;
+    height: 25px;
+    list-style: none;
+    cursor: pointer;
+}
+
+.icons {
+    display: flex;
+}
+
+.icons img {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    margin: 0px 5px;
+}
+
+/* responsive design */
+@media only screen and (max-width: 560px) {
+    .container {
+        max-width: 100%;
+        font-size: 1rem;
+        margin-top: 18vh;
+    }
+
+    .stats-container,
+    #task-list,
+    form {
+        width: 80%;
+        font-size: 0.9rem;
+    }
+
+    .stats-container {
+        box-shadow: 0 3px 10px rgba(255, 255, 255, 0.2),
+            0 8px 19px rgba(255, 255, 255, 0.12);
+        padding: 22px;
+    }
+
+    .icons img {
+        width: 25px;
+        height: 25px;
+    }
+
+    #number {
+        width: 80px;
+        height: 80px;
+        font-size: 1rem;
+    }
+
+    button {
+        width: 40px;
+        align-items: center;
+        text-align: center;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+
+    input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    .stats-container,
+    #task-list,
+    form {
+        width: 93%;
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    #keep {
+        font-size: 0.8rem;
+    }
+
+    .progressBar,
+    .progress {
+        height: 7px;
+    }
+
+    input[type="checkbox"] {
+        width: 17px;
+        height: 17px;
+        fill: var(--purple);
+    }
+
+    #task-list {
+        margin-top: 15px;
+    }
+
+    #number {
+        width: 70px;
+        height: 70px;
+        font-size: 1rem;
+    }
+
+    .icons img {
+        width: 25px;
+        height: 25px;
+    }
+
+    form input::placeholder {
+        font-size: 0.8rem;
+        padding: 12px 3px;
+    }
+}

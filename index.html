@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Todo App</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="stats-container">
+            <div class="details">
+                <h2>Todo List</h2>
+                <p id="keep">Add todo</p>
+                <div class="progressBar">
+                    <div class="progress"></div>
+                </div>
+            </div>
+            <div class="done-tasks">
+                <p id="number">0 / 0</p>
+            </div>
+        </div>
+
+        <form action="#">
+            <input type="text" name="type" id="taskInput" placeholder="Enter your task">
+            <button type="button" id="addTask">+</button>
+        </form>
+
+        <!-- making empty ul -->
+        <ul id="task-list"></ul>
+    </div>
+    <!-- Adding script -->
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
