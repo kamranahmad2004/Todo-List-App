@@ -13,4 +13,4 @@ Technologies Used:
 
 - HTML: Provides the structure of the application, including input field, button, icons, and lists.
 - CSS: Styles the application for a user-friendly interface.
-- JavaScript: Adds interactivity, including the ability to add, complete, edit and delete tasks, as well as storing and retrieving tasks from local storage.
+- JavaScript: Adds interactivity, including the ability to add, complete, edit and delete tasks, as well as storing and retrieving tasks from local storage...
